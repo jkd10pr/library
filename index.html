@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>Library</title>
 </head>
+<button id="night-mode-button"><img id="night-mode-icon" src="images/moon.png" alt="" srcset=""></button>
 <body>
-    
+    <div id="book-card-template" style="display:none;">
+        <div  class="book-card">
+            <div class="book-title">Władca Pierścieni</div>
+            <div class="book-author">J.R.R Tolkien</div>
+            <div class='book-pages'>2000 stron</div>
+            <div class='book-read'>Przeczytano</div>
+        </div>
+    </div>
+
+    <div id="logo-wrapper">
+        <img id="logo-image-1" src="images/logo-icon.png" alt="icon" srcset="">
+        <div id="logo-text">THE <span>MAGIC LIBRARY</span></div>
+        <img id="logo-image-2" src="images/logo-icon.png" alt="icon" srcset="">
+    </div>
+    <h2>List of books</h2>
+<div id="book-area-wrapper">
+        <div id=books>
+            <div id="add-book-button" class="book-card">
+                <div id="add-book-icon">+</div>
+                <div id="add-book-text">Dodaj książkę</div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="scripts/main.js"></script>
+
 </html>
