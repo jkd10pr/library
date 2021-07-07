@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(196, 195, 252);
+}
+
+#logo-wrapper{
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    margin: 20px;
+    /* align-items: flex-start; */
+}
+#logo-text{ 
+    border-bottom: 14px solid #8c5d37;
+    align-self: flex-end;
+    font-size: 50px;
+    font-family: 'Shadows Into Light';
+    font-weight: 900;
+    position: relative;
+    text-shadow: 0 0 10px gold;
+    padding: 0px;
+    text-align: center;
+}
+
+#logo-image-1{
+    height: 120px;
+}
+
+#logo-image-2{
+    height: 120px;
+    transform: rotate3d(0, 1, 0, 180deg);
+}
+
+@media (max-width: 700px){
+    #logo-text{
+        font-size: 9vw;
+        border-bottom: 2.3vw solid #8c5d37;
+        line-height: 9vw;
+    }
+    #logo-image-2, #logo-image-1{
+        height: 20vw;
+        align-self: flex-end;
+    }
+}
+
+span {
+    white-space: nowrap;
+}
+
+.book-card{
+     background-color: red;
+     width:100px;
+     height: 200px;
+}
