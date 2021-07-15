@@ -6,22 +6,23 @@ let bodyElement = document.querySelector('body');
 
 
 //book contructor
-function Book(title, author, pages, read) {
+class Book{
+    constructor (title, author, pages, read){
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
+    }
+
+    info(){
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? 'already read' : 'not read yet'}.`
+    }
+    
+    toggleRead(){
+        this.read=this.read?false:true;
+    }
 }
 
-//prototype function - return info
-Book.prototype.info = function(){
-    return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? 'already read' : 'not read yet'}.`
-}
-
-//prototype function - toggle read property
-Book.prototype.toggleRead = function(){
-    this.read=this.read?false:true;
-}
 
 //functions for manipulating the library
 function addBookToLibrary(bookToAdd) {
@@ -135,6 +136,7 @@ function updateLocalStorage(){
 // //getting local storage to myLibrary
 function getLocalStorage(){
     let toLibrary = JSON.parse(localStorage.getItem('myLibrary'));
+    if(toLibrary===undefined) return;
     toLibrary.forEach((object)=>{
         // book.prototype=toggleRead;
         let bookObject = new Book(object.title,object.author,object.pages,object.read);
