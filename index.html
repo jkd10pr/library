@@ -57,18 +57,19 @@
     <section id='add-book-form-area'>
         <form id="add-book-form">
             <h3>Add new book</h3>
-            <label for="title-input">Title</label>
-            <input id="title-input" class="form-input" type="text">
+            <label for="title-input" >Title</label>
+            <input id="title-input" class="form-input" type="text" pattern="^[a-zA-Z\s]*$" required>
             <label for="author-input">Author</label>
-            <input id="author-input" class="form-input" type="text">
+            <input id="author-input" class="form-input" type="text" pattern="^[a-zA-Z\s]*$"  required>
             <label for="pages-input">Pages</label>
-            <input id="pages-input" class="form-input" type="text">
+            <input id="pages-input" class="form-input" type="number" min="1" required>
             <span>
                 <label id="read-input-label" for="read-input">Read</label>
                 <input id="read-input" type="checkbox" unchecked>
             </span>
-            <button type="button" id="confirm-add-button" class="form-button">Confirm</button>
-            <button type="button" id="cancel-add-button" class="form-button">Cancel</button>
+            <!-- <button class="form-button" id="confirm-add-button">Submit</button> -->
+            <button id="confirm-add-button" class="form-button">Submit</button>
+            <button id="cancel-add-button" class="form-button" >Cancel</button>
         </form>
     </section>
 </body>

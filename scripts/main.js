@@ -110,7 +110,6 @@ function submitForm() {
     let read = document.querySelector('#read-input').checked;
 
     if (title === '' || author === '' || pages === '') {
-        alert('Not all fields are filled!')
         return;
     }
 
@@ -162,17 +161,6 @@ nightModeButton.addEventListener('click', toggleNightMode)
 cancelFormButton.addEventListener('click', closeForm);
 confirmFormButton.addEventListener('click', submitForm)
 bookFormArea.addEventListener('click',closeForm)
-
-//few example books
-// let lotr = new Book('Lord of The Rings', 'J.R.R Tolkien', 1000, false);
-// let droga = new Book('Droga Królów', 'Brandon Sanderson', 2000, false);
-// let diuna = new Book('Diuna','Frank Herbert',2000,true)
-// addBookToLibrary(droga);
-// addBookToLibrary(lotr);
-// addBookToLibrary(diuna);
-// displayAllBooks();
-
-// let fromStorage = JSON.parse(localStorage.getItem('myLibrary'));
 
 getLocalStorage();
 displayAllBooks();
